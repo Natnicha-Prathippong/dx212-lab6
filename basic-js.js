@@ -24,3 +24,21 @@ let scores = [90, 80, 70, 60, 50];
 let students = [student1, student2];
 
 console.log(students[1].gpa);
+function calculateGrade(score) {
+    if (score >=90) {
+        return "A";
+    } else if (score >=80) {
+        return "B";
+    } else if (score >=70) {
+        return "C";
+    } else {
+        return "F";
+    }
+}
+
+console.log(calculateGrade(90));
+
+for (let i = 0; i < scores.length; i++) {
+    let grade = calculateGrade(scores[i]);
+    console.log(`Scores: ${scores[1]}, Grade: ${grade}`);
+}
